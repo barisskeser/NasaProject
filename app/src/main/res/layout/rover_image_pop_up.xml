@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/purple_500"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/roverPhoto"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_gravity="fill"
+        android:foregroundGravity="fill"
+        android:scaleType="fitCenter"
+        android:src="@drawable/be"
+        android:layout_margin="15dp"
+        android:adjustViewBounds="true"
+        android:contentDescription="@string/rover_image"/>
+
+    <TextView
+        android:id="@+id/earthDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="5dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:text="Earth Date" />
+
+    <TextView
+        android:id="@+id/roverName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="5dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:text="Rover Name" />
+
+    <TextView
+        android:id="@+id/cameraName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="5dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:text="Camera Name" />
+
+    <TextView
+        android:id="@+id/roverStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="5dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:text="Rover Status" />
+
+    <TextView
+        android:id="@+id/roverLaunchDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="5dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:text="Launching Date" />
+
+    <TextView
+        android:id="@+id/roverLandDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="5dp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:text="Landing Date" />
+
+
+</LinearLayout>

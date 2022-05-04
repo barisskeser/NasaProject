@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <RadioButton
+            android:id="@+id/allCam"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ALL" />
+
+        <RadioButton
+            android:id="@+id/fhazCam"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="FHAZ" />
+
+        <RadioButton
+            android:id="@+id/rhazCam"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RHAZ" />
+
+        <RadioButton
+            android:id="@+id/mastCam"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MAST" />
+
+        <RadioButton
+            android:id="@+id/chemcamCam"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="CHEMCAM" />
+
+        <RadioButton
+            android:id="@+id/navcamCam"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="NAVCAM" />
+
+        <RadioButton
+            android:id="@+id/minitesCam"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MINITES" />
+
+        <RadioButton
+            android:id="@+id/pancamCam"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PANCAM" />
+
+        <RadioButton
+            android:id="@+id/mardiCam"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MARDI" />
+
+        <RadioButton
+            android:id="@+id/mahliCam"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MAHLI" />
+
+    </RadioGroup>
+
+
+</LinearLayout>
