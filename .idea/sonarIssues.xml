@@ -8,6 +8,11 @@
             <set />
           </value>
         </entry>
+        <entry key="/fragment.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/../KotlinUlkeler/app/src/main/java/com/example/kotlinulkeler/util/Util.kt">
           <value>
             <set />
@@ -348,12 +353,32 @@
             <set />
           </value>
         </entry>
+        <entry key="$PROJECT_DIR$/app/src/test/java/com/baris/nasaproject/domain/repository/FakeNasaRepository.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/app/src/test/java/com/baris/nasaproject/domain/usecase/GetCamerasUseCaseTest.java">
           <value>
             <set />
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/app/src/test/java/com/baris/nasaproject/domain/usecase/GetCamerasUseCaseTest.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/test/java/com/baris/nasaproject/domain/usecase/GetRoverPhotosUseCaseTest.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/test/java/com/baris/nasaproject/ui/main/MainViewModelTest.java">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/test/java/com/baris/nasaproject/ui/main/MainViewModelTest.kt">
           <value>
             <set />
           </value>
