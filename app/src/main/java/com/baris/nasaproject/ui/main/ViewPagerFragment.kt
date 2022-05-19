@@ -46,9 +46,6 @@ class ViewPagerFragment : Fragment() {
 
         setHasOptionsMenu(true)
 
-        observeNasaState()
-        observeCameraState()
-
         materialAlertDialogBuilder = MaterialAlertDialogBuilder(requireContext())
 
         arguments?.takeIf { it.containsKey("ROVER") }?.apply {
@@ -68,6 +65,8 @@ class ViewPagerFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        observeNasaState()
+        observeCameraState()
 
         photoAdapter = PhotoListAdapter(photoList, binding.root)
 
@@ -93,33 +92,33 @@ class ViewPagerFragment : Fragment() {
         viewModel.getRoverCameras(roverName, Constants.DEFAULT_SOL)
     }
 
-    private fun observeNasaState() = CoroutineScope(Dispatchers.Main).launch {
+    private fun observeNasaState() {
         viewModel.nasaStateLiveData.observe(viewLifecycleOwner) { state ->
             nasaState = state
             checkNasaState()
         }
     }
 
-        private fun observeCameraState() = CoroutineScope(Dispatchers.Main).launch {
-            viewModel.cameraStateLiveData.observe(viewLifecycleOwner) { state ->
-                state.data?.let {
-                    cameras.clear()
-                    cameras.addAll(it)
-                }
+    private fun observeCameraState() {
+        viewModel.cameraStateLiveData.observe(viewLifecycleOwner) { state ->
+            state.data?.let {
+                cameras.clear()
+                cameras.addAll(it)
             }
         }
+    }
 
-        @SuppressLint("NotifyDataSetChanged")
-        private fun checkNasaState() {
-            if (nasaState.loading)
-                binding.progressBar.visibility = View.VISIBLE
+    @SuppressLint("NotifyDataSetChanged")
+    private fun checkNasaState() {
+        if (nasaState.loading)
+            binding.progressBar.visibility = View.VISIBLE
 
-            if (nasaState.errorMessage.isNotEmpty()) {
-                binding.progressBar.visibility = View.GONE
-                Log.d("ViewPagerFragment", "error: ${nasaState.errorMessage}")
-            }
+        if (nasaState.errorMessage.isNotEmpty()) {
+            binding.progressBar.visibility = View.GONE
+            Log.d("ViewPagerFragment", "error: ${nasaState.errorMessage}")
+        }
 
-            nasaState.data?.let { nasa ->
+        nasaState.data?.let { nasa ->
             binding.progressBar.visibility = View.GONE
             if (nasa.photos.isEmpty()) viewModel.gotAllPage()
             else {
